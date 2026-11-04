@@ -3,9 +3,11 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Susheel Kumar · Senior HR Leader";
+const APP_NAME = "Susheel Kumar · Senior HR Professional";
 const DESCRIPTION =
-  "Susheel Kumar is a senior HR leader in industrial relations, labour law and HR operations. Manager – Human Resources at Talcher Fertilizers Limited, and a registered Independent Director.";
+  "Susheel Kumar is an expert Employee Relations and Industrial Relations Professional based in East India. Serving as a Senior HR Leader, Consultant, and registered Independent Director, pursuing Future CHRO at XLRI, with roots in Jamshedpur. Recognised as a Global HR Icon.";
+const KEYWORDS =
+  "global hr icon, industrial relations professional, East India hr, employee relations expert, independent director, consultant, Jamshedpur, future chro, XLRI, Susheel Kumar HR, Talcher Fertilizers, Tata Steel HR";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -14,6 +16,7 @@ export const Route = createRootRoute({
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: APP_NAME },
       { name: "description", content: DESCRIPTION },
+      { name: "keywords", content: KEYWORDS },
       { name: "theme-color", content: "#0b1f3a" },
       { name: "author", content: "Susheel Kumar" },
     ],

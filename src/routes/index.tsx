@@ -278,19 +278,19 @@ function HomeSection() {
             />
           </div>
           <figcaption className="mt-3 flex items-center justify-between text-xs tracking-widest text-slate uppercase">
-            <span>Talcher, Odisha</span>
+            <span>Jamshedpur</span>
             <span>East India</span>
           </figcaption>
         </figure>
 
         <div className="md:col-span-7">
           <p className="rise text-xs font-medium tracking-widest text-slate uppercase">
-            Senior HR leader · HR business partner
+            Senior HR Professional · Global HR Icon
           </p>
           <h1 className="rise rise-2 mt-4 font-serif text-5xl text-navy md:text-7xl">Susheel Kumar</h1>
-          <p className="rise rise-3 mt-4 max-w-xl font-serif text-2xl text-navy italic">
-            Industrial relations, labour law, and the running of a plant HR office.
-          </p>
+          <h2 className="rise rise-3 mt-4 max-w-xl font-serif text-2xl text-navy italic">
+            Industrial relations professional and employee relations expert
+          </h2>
           <p className="mt-6 max-w-xl text-base text-slate">
             Good day. I am an HR business partner with 21 years in industry, more than ten of them in
             human resources across steel, power and fertilizer. I am also a registered Independent
@@ -308,7 +308,7 @@ function HomeSection() {
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-14 md:grid-cols-12 md:px-8 md:py-20">
           <div className="md:col-span-4">
             <p className="text-xs font-medium tracking-widest text-slate uppercase">01 — About</p>
-            <h2 className="mt-3 font-serif text-4xl text-navy">A plant HR leader, not a policy spectator.</h2>
+            <h2 className="mt-3 font-serif text-4xl text-navy">Independent director and consultant, rooted in Jamshedpur.</h2>
           </div>
           <div className="space-y-5 text-base md:col-span-8">
             <p>
@@ -351,7 +351,7 @@ function ExpertiseSection() {
         <div className="max-w-2xl">
           <p className="text-xs font-medium tracking-widest text-slate uppercase">02 — Core HR expertise</p>
           <h2 className="mt-3 font-serif text-4xl text-navy md:text-5xl">
-            The work I am asked to own.
+            East India HR, practised with the workforce.
           </h2>
           <p className="mt-4 text-base text-slate">
             Talent acquisition, employee relations and HR operations sit at the centre. Around them is
@@ -386,7 +386,7 @@ function ExperienceSection() {
             03 — Professional experience
           </p>
           <h2 className="mt-3 font-serif text-4xl text-navy md:text-5xl">
-            Steel, power, then fertilizer.
+            Towards a future CHRO, through XLRI.
           </h2>
         </div>
 
