@@ -455,12 +455,6 @@ function ContactSection() {
             For a leadership role, a board conversation, or a matter of labour and industrial relations.
             I read every note myself.
           </p>
-          <p className="mt-6 text-sm">
-            <a className="underline decoration-slate/40 underline-offset-4" href="mailto:susheel.jsr@gmail.com">
-              susheel.jsr@gmail.com
-            </a>
-            <span className="mt-1 block text-slate">+91 92042 66568 · Talcher, Odisha</span>
-          </p>
           <div className="mt-8 flex flex-col gap-3">
             {CHANNELS.map((channel) => (
               <ChannelButton key={channel.label} {...channel} wide />
