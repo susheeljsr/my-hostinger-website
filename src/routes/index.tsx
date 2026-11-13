@@ -9,6 +9,8 @@ const NAV = [
   { id: "home", label: "Home" },
   { id: "expertise", label: "Expertise" },
   { id: "experience", label: "Experience" },
+  { id: "training", label: "Training" },
+  { id: "recognition", label: "Recognition" },
   { id: "contact", label: "Contact" },
 ] as const;
 
@@ -128,7 +130,7 @@ const ROLES = [
 ] as const;
 
 const FORMATION = [
-  "LL.B. — Awadhesh Pratap Singh University",
+  "LL.B., Bachelor of Laws — Awadhesh Pratap Singh University",
   "MBA, Human Resource Management & Marketing — Kolhan University",
   "B.Sc., Information Technology — Sikkim Manipal University",
   "Senior Executive Development Programme, Building Future CHROs — XLRI (pursuing)",
@@ -148,13 +150,245 @@ const CREDENTIALS = [
   "AI for Human Resources",
 ] as const;
 
-const HONOURS = [
-  "Top 15 Global HR Icon 2026 — CHRD",
-  "Managing Director’s Appreciation — Talcher Fertilizers Limited, ₹12,250.06 crore financial closure",
-  "Republic Day Award, 2017",
-  "Republic Day Award, 2023",
-  "Kaizen and suggestion awards — Tata Steel",
-] as const;
+const HONOURS: Paper[] = [
+  {
+    title: "Top 15 Global HR Icon 2026",
+    meta: "CHRD",
+    detail:
+      "Named among the top 15 global leaders in the CHRD Global HR Icon 2026 roll, as Manager – Human Resources, Talcher Fertilizers Limited.",
+    file: "/certificates/chrd-global-hr-icon-2026.jpeg",
+  },
+  {
+    title: "Managing Director’s appreciation",
+    meta: "Talcher Fertilizers Limited · 22 October 2025",
+    detail:
+      "Awarded for cross-functional coordination, statutory and legal compliance, and successful support in the financial closure of the ₹12,250.06 crore rupee term loan. Reference TFL/Talcher/MD/Appreciation Letter/1341.",
+    file: "/certificates/tfl-md-appreciation.jpeg",
+  },
+  {
+    title: "प्रशस्ति पत्र",
+    meta: "MPPGCL, Sanjay Gandhi Thermal Power Station, Birsinghpur · 26 January 2023",
+    detail:
+      "Issued by Madhya Pradesh Power Generating Company Limited for the year 2022, for effective resolution of labour and union grievances, including contract-workmen complaints, the CRM helpline, unit complaints, RTI work and departmental enquiries.",
+    file: "/certificates/mppgcl-prasasti-patra.jpg",
+  },
+  {
+    title: "Outstanding Performer",
+    meta: "Jamshedpur Workers’ College, a constituent unit of Kolhan University",
+    detail:
+      "Presented to Susheel in recognition of excellent effort as an outstanding student.",
+    file: "/certificates/workers-college-outstanding-performer.jpeg",
+  },
+  {
+    title: "Champion Level Aspire, Cycles 8 and 9",
+    meta: "Tata Steel · Electrical Maintenance · 17 October 2013",
+    detail:
+      "Certificate of recognition for one self-initiated Aspire project. Personnel number 504080.",
+    file: "/certificates/tata-steel-aspire.jpg",
+  },
+  {
+    title: "Republic Day Award, 2017",
+    meta: "In service",
+    detail: "Republic Day honour recorded in service.",
+  },
+  {
+    title: "Republic Day Award, 2023",
+    meta: "In service",
+    detail: "Republic Day honour recorded in service.",
+  },
+];
+
+const TRAINING: Paper[] = [
+  {
+    title: "UGC-NET, November 2017",
+    meta: "University Grants Commission · eligibility 2 January 2018",
+    detail:
+      "Qualified for Assistant Professor in Labour Welfare, Personnel Management, Industrial Relations, Labour and Social Welfare, and Human Resource Management. Electronic certificate 172035128. UGC reference 35128/(NET-NOV 2017). Roll number 49007570. Examination 5 November 2017.",
+    file: "/certificates/ugc-net-nov-2017.pdf",
+  },
+  {
+    title: "UGC-NET, July 2018",
+    meta: "University Grants Commission · eligibility 31 July 2018",
+    detail:
+      "Qualified again for Assistant Professor in the same labour welfare and human resource management subject. Electronic certificate 181043134. UGC reference 43134/(NET-JULY 2018). Roll number 13006428. Examination 8 July 2018.",
+    file: "/certificates/ugc-net-july-2018.pdf",
+  },
+  {
+    title: "New Labour Codes: Issues and Perspectives",
+    meta: "V.V. Giri National Labour Institute, Noida · 30 March–1 April 2026",
+    detail:
+      "Training programme completed at VVGNLI. Certificate 3278/231/2025-26, dated 1 April 2026. Course Director Dr. Ruma Ghosh; Director General Dr. Arvind.",
+    file: "/certificates/vvgnli-new-labour-codes.pdf",
+  },
+  {
+    title: "Labour Codes Conclave 2026",
+    meta: "NHRD XLRI Chapter with NHRD Bhubaneswar · 7 February 2026",
+    detail:
+      "Participated for Talcher Fertilizers Limited at XLRI – Xavier School of Management, Jamshedpur. The conclave took up contemporary developments in labour and employment law.",
+    file: "/certificates/xlri-nhrd-labour-codes-conclave.pdf",
+  },
+  {
+    title: "ETS (HR) institutional training",
+    meta: "National Power Training Institute, Western Region, Nagpur · 28 August–15 December 2017",
+    detail:
+      "Sixteen-week customised programme for executive trainees in HR at M.P. Power Generating Company Limited.",
+    file: "/certificates/npti-ets-hr.jpg",
+  },
+  {
+    title: "Ethical and legal outsourcing practices for India",
+    meta: "IIT Kharagpur, Department of Mining Engineering · 3–7 January 2019",
+    detail:
+      "Short-term continuing education course, attended from M.P. Power Generating Company Limited.",
+    file: "/certificates/iit-kharagpur-outsourcing.pdf",
+  },
+  {
+    title: "Naukri Maestro Recruiter",
+    meta: "Naukri.com · 3 November 2025",
+    detail: "Programme completed. Certificate 98562-7-2025-11-03.",
+    file: "/certificates/naukri-maestro-recruiter.pdf",
+  },
+  {
+    title: "AI in HR",
+    meta: "Keka Academy · 5 October 2025",
+    detail: "Certification examination in artificial intelligence for human resources.",
+    file: "/certificates/keka-ai-in-hr.pdf",
+  },
+  {
+    title: "POSH certification",
+    meta: "Keka Academy with Safe Spaces · 17 September 2025",
+    detail:
+      "Certification examination on the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013.",
+    file: "/certificates/keka-posh.pdf",
+  },
+  {
+    title: "POSH Act assessment",
+    meta: "HR Success Talk · certificate HRST/PO/01/19/293",
+    detail: "Online assessment of the POSH Act, 2013, scored at 70 percent.",
+    file: "/certificates/posh-act-assessment.jpeg",
+  },
+  {
+    title: "Keka Hire (ATS)",
+    meta: "Keka Academy · 17 September 2025",
+    detail: "Fundamental certification in the Keka applicant-tracking system.",
+    file: "/certificates/keka-hire-ats.pdf",
+  },
+  {
+    title: "Government e Marketplace",
+    meta: "GeM training · 22 May 2025",
+    detail: "Participation in the Government e Marketplace training session.",
+    file: "/certificates/gem-training.pdf",
+  },
+  {
+    title: "SEBI Investor Awareness Test",
+    meta: "SEBI and National Institute of Securities Markets · 18 July 2025",
+    detail: "Completed the investor awareness test. Enrollment NISM20250000239137.",
+    file: "/certificates/sebi-nism-investor-awareness.pdf",
+  },
+  {
+    title: "Provident Fund Act in India",
+    meta: "HR Success Talk · certificate HR/EDU/2016/PF/037",
+    detail: "Online assessment of the Provident Fund Act, scored at 80 percent.",
+    file: "/certificates/provident-fund-act.jpg",
+  },
+  {
+    title: "Advanced Compensation and Benefits",
+    meta: "HR Education · certificate HREDU/AdC&B/03/17/002",
+    detail: "Online assessment scored at 90 percent.",
+    file: "/certificates/advanced-compensation.jpg",
+  },
+  {
+    title: "Basics of Compensation and Benefits",
+    meta: "HR Education · certificate 02/17/02",
+    detail: "Online assessment scored at 93 percent.",
+    file: "/certificates/basics-compensation.jpg",
+  },
+  {
+    title: "Outdoor development training",
+    meta: "Tata Steel Adventure Foundation, Uttarkashi · 25 June–4 July 2008",
+    detail:
+      "HRD skills for character, teams, manager development and change, signed by Bachendri Pal. Height gained to 13,575 ft at Darwa Top.",
+    file: "/certificates/tata-steel-adventure-foundation.jpg",
+  },
+  {
+    title: "Introduction to SuccessFactors Foundation",
+    meta: "LinkedIn Learning · 29 October 2025",
+    detail: "SAP SuccessFactors foundation module.",
+    file: "/certificates/li-successfactors-foundation.pdf",
+  },
+  {
+    title: "SuccessFactors Performance and Goals",
+    meta: "LinkedIn Learning · 24 October 2025",
+    detail: "SAP SuccessFactors performance and goals management.",
+    file: "/certificates/li-successfactors-performance.pdf",
+  },
+  {
+    title: "Strategic workforce planning",
+    meta: "LinkedIn Learning · 27 October 2025",
+    detail: "Human resources workforce planning.",
+    file: "/certificates/li-workforce-planning.pdf",
+  },
+  {
+    title: "Generative AI, recruiting and talent acquisition",
+    meta: "LinkedIn Learning · 5 October 2025",
+    detail: "Talent management and artificial intelligence in recruiting.",
+    file: "/certificates/li-generative-ai-recruiting.pdf",
+  },
+  {
+    title: "Advancing skills as an HR business partner",
+    meta: "LinkedIn Learning · 24 October 2025",
+    detail: "Learning path in human resources and talent management.",
+    file: "/certificates/li-hr-business-partner.pdf",
+  },
+  {
+    title: "Strategic human resources",
+    meta: "LinkedIn Learning · 9 October 2025",
+    detail: "Strategic human resource planning.",
+    file: "/certificates/li-strategic-hr.pdf",
+  },
+  {
+    title: "The Human Resources Hero",
+    meta: "LinkedIn Learning · 10 October 2025",
+    detail: "Practice of the human resources role.",
+    file: "/certificates/li-hr-hero.pdf",
+  },
+  {
+    title: "Employee experience",
+    meta: "LinkedIn Learning · 12 October 2025",
+    detail: "Employee engagement.",
+    file: "/certificates/li-employee-experience.pdf",
+  },
+  {
+    title: "Employee experience in a hybrid workplace",
+    meta: "LinkedIn Learning · 15 October 2025",
+    detail: "Workplace culture and hybrid work.",
+    file: "/certificates/li-hybrid-employee-experience.pdf",
+  },
+  {
+    title: "Creating a culture of learning",
+    meta: "LinkedIn Learning · 24 October 2025",
+    detail: "Organisational culture and employee learning.",
+    file: "/certificates/li-culture-of-learning.pdf",
+  },
+  {
+    title: "How to save face in a negotiation",
+    meta: "LinkedIn Learning · 28 October 2025",
+    detail: "Negotiation practice.",
+    file: "/certificates/li-negotiation.pdf",
+  },
+  {
+    title: "Leading an organisation on allyship",
+    meta: "LinkedIn Learning · 20 October 2025",
+    detail: "Allyship in the organisation.",
+    file: "/certificates/li-allyship.pdf",
+  },
+];
+
+type Paper = {
+  title: string;
+  meta: string;
+  detail: string;
+  file?: string;
+};
 
 const EMPTY: EnquiryInput = {
   name: "",
@@ -179,6 +413,8 @@ function Home() {
         <HomeSection />
         <ExpertiseSection />
         <ExperienceSection />
+        <TrainingSection />
+        <RecognitionSection />
         <ContactSection />
       </main>
       <SiteFooter />
@@ -220,7 +456,7 @@ function SiteHeader() {
             <span className="block text-xs text-slate">hrsk.in</span>
           </span>
         </a>
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Sections">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Sections">
           {NAV.map((item) => (
             <a
               key={item.id}
@@ -239,7 +475,7 @@ function SiteHeader() {
         </nav>
         <button
           type="button"
-          className="inline-flex size-11 items-center justify-center border border-slate/30 text-navy md:hidden"
+          className="inline-flex size-11 items-center justify-center border border-slate/30 text-navy lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((value) => !value)}
@@ -249,7 +485,7 @@ function SiteHeader() {
         </button>
       </div>
       {open ? (
-        <nav id="mobile-nav" className="border-t border-slate/20 px-5 py-2 md:hidden" aria-label="Sections">
+        <nav id="mobile-nav" className="border-t border-slate/20 px-5 py-2 lg:hidden" aria-label="Sections">
           {NAV.map((item) => (
             <a
               key={item.id}
@@ -294,8 +530,9 @@ function HomeSection() {
           </h2>
           <p className="mt-6 max-w-xl text-base text-slate">
             Good day. I am an HR business partner with 21 years in industry, more than ten of them in
-            human resources across steel, power and fertilizer. I am a registered Independent Director
-            with the Indian Institute of Corporate Affairs, registration IDDB-NR-202603-088622.
+            human resources across steel, power and fertilizer. I hold an LL.B., and I am a registered
+            Independent Director with the Indian Institute of Corporate Affairs, registration
+            IDDB-NR-202603-088622.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             {CHANNELS.map((channel) => (
@@ -325,7 +562,8 @@ function HomeSection() {
             </p>
             <p>
               I began at Tata Steel, Jamshedpur, in electrical maintenance. Eleven years on the shop floor
-              still decide how I listen to workmen, contractors and plant heads. I am registered as an
+              still decide how I listen to workmen, contractors and plant heads. The LL.B. is the legal
+              ground under that work. I am registered as an
               Independent Director with IICA (IDDB-NR-202603-088622) and a startup mentor on Startup
               India’s BHASKAR platform (ID IN-0626-9484JH). I am a certified Factory Labour Welfare
               Officer, UGC-NET qualified in Labour Welfare and Human Resource Management, and pursuing
@@ -436,13 +674,101 @@ function ExperienceSection() {
             <h3 className="font-serif text-2xl text-navy">Recognition</h3>
             <ul className="mt-4 space-y-3 text-sm text-slate">
               {HONOURS.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item.title}>{item.title}</li>
               ))}
             </ul>
+            <a href="#recognition" className="mt-4 inline-flex min-h-11 items-center text-sm text-navy underline decoration-slate/40 underline-offset-4">
+              Letters and certificates
+            </a>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function TrainingSection() {
+  return (
+    <section id="training" className="scroll-mt-28 border-b border-slate/20">
+      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+        <div className="max-w-2xl">
+          <p className="text-xs font-medium tracking-widest text-slate uppercase">04 — Certification and training</p>
+          <h2 className="mt-3 font-serif text-4xl text-navy md:text-5xl">What has been examined, and taught.</h2>
+          <p className="mt-4 text-base text-slate">
+            Two UGC-NET qualifications in labour welfare and human resource management, the LL.B. behind
+            the statutory work, and the institutes that have tested that practice: VVGNLI, XLRI, NPTI,
+            IIT Kharagpur, Naukri and Keka.
+          </p>
+        </div>
+        <PaperList items={TRAINING} />
+      </div>
+    </section>
+  );
+}
+
+function RecognitionSection() {
+  return (
+    <section id="recognition" className="scroll-mt-28 border-b border-slate/20 bg-surface">
+      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+        <div className="max-w-2xl">
+          <p className="text-xs font-medium tracking-widest text-slate uppercase">05 — Recognition</p>
+          <h2 className="mt-3 font-serif text-4xl text-navy md:text-5xl">Letters, not claims.</h2>
+          <p className="mt-4 text-base text-slate">
+            Appreciation from the Managing Director at Talcher Fertilizers, a प्रशस्ति पत्र from MPPGCL
+            for labour and union grievances, and the CHRD Global HR Icon roll. A note of the same record
+            is on{" "}
+            <a
+              className="underline decoration-slate/40 underline-offset-4"
+              href="https://lnkd.in/p/dVzbYgAi"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+            .
+          </p>
+        </div>
+        <PaperList items={HONOURS} />
+      </div>
+    </section>
+  );
+}
+
+function PaperList({ items }: { items: readonly Paper[] }) {
+  return (
+    <ul className="mt-12 border-t border-slate/25">
+      {items.map((item) => {
+        const isImage = item.file ? /\.(jpe?g|png|webp)$/i.test(item.file) : false;
+        return (
+          <li key={item.title} className="grid gap-5 border-b border-slate/25 py-6 md:grid-cols-12 md:gap-8">
+            <div className="md:col-span-8">
+              <h3 className="font-serif text-2xl text-navy">{item.title}</h3>
+              <p className="mt-1 text-sm text-slate">{item.meta}</p>
+              <p className="mt-3 max-w-2xl text-base text-slate">{item.detail}</p>
+              {item.file ? (
+                <a
+                  href={item.file}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex min-h-11 items-center text-sm font-medium text-navy underline decoration-slate/40 underline-offset-4"
+                >
+                  {isImage ? "Open certificate" : "Open certificate (PDF)"}
+                </a>
+              ) : null}
+            </div>
+            {isImage && item.file ? (
+              <a href={item.file} target="_blank" rel="noreferrer" className="md:col-span-4">
+                <img
+                  src={item.file}
+                  alt={item.title}
+                  className="max-h-48 w-full border border-slate/25 bg-paper object-contain object-left"
+                />
+              </a>
+            ) : null}
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 
@@ -451,7 +777,7 @@ function ContactSection() {
     <section id="contact" className="scroll-mt-28">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-12 md:px-8 md:py-24">
         <div className="md:col-span-5">
-          <p className="text-xs font-medium tracking-widest text-slate uppercase">04 — Contact</p>
+          <p className="text-xs font-medium tracking-widest text-slate uppercase">06 — Contact</p>
           <h2 className="mt-3 font-serif text-4xl text-navy md:text-5xl">Write, or reach me directly.</h2>
           <p className="mt-4 text-base text-slate">
             For a leadership role, a board conversation, or a matter of labour and industrial relations.
