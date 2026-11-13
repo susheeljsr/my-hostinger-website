@@ -136,7 +136,7 @@ const FORMATION = [
 
 const CREDENTIALS = [
   "Independent Director — IICA Databank, IDDB-NR-202603-088622",
-  "BHASKAR ID IN-0626-9484JH — Startup India",
+  "Startup Mentor — BHASKAR, Startup India, ID IN-0626-9484JH",
   "UGC-NET — Labour Welfare / Human Resource Management",
   "Certified Factory Labour Welfare Officer",
   "POSH compliance",
@@ -326,10 +326,10 @@ function HomeSection() {
             <p>
               I began at Tata Steel, Jamshedpur, in electrical maintenance. Eleven years on the shop floor
               still decide how I listen to workmen, contractors and plant heads. I am registered as an
-              Independent Director with IICA (IDDB-NR-202603-088622). I
-              am also on Startup India’s BHASKAR network, ID IN-0626-9484JH, a certified Factory Labour
-              Welfare Officer, UGC-NET qualified in Labour Welfare and Human Resource Management, and
-              pursuing XLRI’s programme in Building Future CHROs.
+              Independent Director with IICA (IDDB-NR-202603-088622) and a startup mentor on Startup
+              India’s BHASKAR platform (ID IN-0626-9484JH). I am a certified Factory Labour Welfare
+              Officer, UGC-NET qualified in Labour Welfare and Human Resource Management, and pursuing
+              XLRI’s programme in Building Future CHROs.
             </p>
           </div>
         </div>
@@ -740,7 +740,7 @@ function SiteFooter() {
         </div>
         <div className="text-sm text-paper/75">
           <p>English · Hindi · Odia · Bangla · Bhojpuri</p>
-          <p className="mt-1">BHASKAR IN-0626-9484JH · hrsk.in</p>
+          <p className="mt-1">Startup Mentor · BHASKAR IN-0626-9484JH · hrsk.in</p>
         </div>
       </div>
     </footer>
