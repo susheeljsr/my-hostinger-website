@@ -135,7 +135,7 @@ const FORMATION = [
 ] as const;
 
 const CREDENTIALS = [
-  "Independent Director — IICA Databank, IDDB-NR-202603-088622 (11 March 2026 to 10 March 2027)",
+  "Independent Director — IICA Databank, IDDB-NR-202603-088622",
   "BHASKAR ID IN-0626-9484JH — Startup India",
   "UGC-NET — Labour Welfare / Human Resource Management",
   "Certified Factory Labour Welfare Officer",
@@ -295,8 +295,7 @@ function HomeSection() {
           <p className="mt-6 max-w-xl text-base text-slate">
             Good day. I am an HR business partner with 21 years in industry, more than ten of them in
             human resources across steel, power and fertilizer. I am a registered Independent Director
-            with the Indian Institute of Corporate Affairs, registration IDDB-NR-202603-088622, valid to
-            10 March 2027.
+            with the Indian Institute of Corporate Affairs, registration IDDB-NR-202603-088622.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             {CHANNELS.map((channel) => (
@@ -326,8 +325,8 @@ function HomeSection() {
             </p>
             <p>
               I began at Tata Steel, Jamshedpur, in electrical maintenance. Eleven years on the shop floor
-              still decide how I listen to workmen, contractors and plant heads. My Independent Director
-              registration with IICA (IDDB-NR-202603-088622) runs from 11 March 2026 to 10 March 2027. I
+              still decide how I listen to workmen, contractors and plant heads. I am registered as an
+              Independent Director with IICA (IDDB-NR-202603-088622). I
               am also on Startup India’s BHASKAR network, ID IN-0626-9484JH, a certified Factory Labour
               Welfare Officer, UGC-NET qualified in Labour Welfare and Human Resource Management, and
               pursuing XLRI’s programme in Building Future CHROs.
