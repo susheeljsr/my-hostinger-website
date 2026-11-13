@@ -135,7 +135,8 @@ const FORMATION = [
 ] as const;
 
 const CREDENTIALS = [
-  "Registered Independent Director — Independent Directors Databank",
+  "Independent Director — IICA Databank, IDDB-NR-202603-088622 (11 March 2026 to 10 March 2027)",
+  "BHASKAR ID IN-0626-9484JH — Startup India",
   "UGC-NET — Labour Welfare / Human Resource Management",
   "Certified Factory Labour Welfare Officer",
   "POSH compliance",
@@ -293,8 +294,9 @@ function HomeSection() {
           </h2>
           <p className="mt-6 max-w-xl text-base text-slate">
             Good day. I am an HR business partner with 21 years in industry, more than ten of them in
-            human resources across steel, power and fertilizer. I am also a registered Independent
-            Director.
+            human resources across steel, power and fertilizer. I am a registered Independent Director
+            with the Indian Institute of Corporate Affairs, registration IDDB-NR-202603-088622, valid to
+            10 March 2027.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             {CHANNELS.map((channel) => (
@@ -324,10 +326,11 @@ function HomeSection() {
             </p>
             <p>
               I began at Tata Steel, Jamshedpur, in electrical maintenance. Eleven years on the shop floor
-              still decide how I listen to workmen, contractors and plant heads. I am registered on the
-              Independent Directors Databank, certified as a Factory Labour Welfare Officer, UGC-NET
-              qualified in Labour Welfare and Human Resource Management, and pursuing XLRI’s programme in
-              Building Future CHROs.
+              still decide how I listen to workmen, contractors and plant heads. My Independent Director
+              registration with IICA (IDDB-NR-202603-088622) runs from 11 March 2026 to 10 March 2027. I
+              am also on Startup India’s BHASKAR network, ID IN-0626-9484JH, a certified Factory Labour
+              Welfare Officer, UGC-NET qualified in Labour Welfare and Human Resource Management, and
+              pursuing XLRI’s programme in Building Future CHROs.
             </p>
           </div>
         </div>
@@ -733,12 +736,12 @@ function SiteFooter() {
         <div>
           <p className="font-serif text-2xl">Susheel Kumar</p>
           <p className="mt-1 text-sm text-paper/75">
-            Manager – Human Resources · Registered Independent Director
+            Manager – Human Resources · Independent Director, IDDB-NR-202603-088622
           </p>
         </div>
         <div className="text-sm text-paper/75">
           <p>English · Hindi · Odia · Bangla · Bhojpuri</p>
-          <p className="mt-1">hrsk.in</p>
+          <p className="mt-1">BHASKAR IN-0626-9484JH · hrsk.in</p>
         </div>
       </div>
     </footer>
