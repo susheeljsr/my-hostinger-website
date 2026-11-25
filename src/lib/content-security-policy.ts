@@ -1,0 +1,21 @@
+/**
+ * Enforced on every response. Inline scripts stay allowed because TanStack
+ * Start bootstraps the page with a small inline stream script. The Grok
+ * banner script and its injected stylesheet are allow-listed on purpose.
+ */
+export function contentSecurityPolicy(): string {
+  return [
+    "default-src 'self'",
+    "base-uri 'self'",
+    "object-src 'none'",
+    "script-src 'self' 'unsafe-inline' https://grok.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "font-src 'self' https://fonts.gstatic.com",
+    "img-src 'self' data: blob:",
+    "connect-src 'self' https://grok.com https://app-builder-deployer.grok.com https://grok.gcp.mouseion.dev https://app-builder-deployer.gcp.mouseion.dev",
+    "manifest-src 'self'",
+    "worker-src 'self'",
+    "form-action 'self'",
+    "frame-ancestors 'self' https://grok.com https://*.grok.com https://*.mouseion.dev",
+  ].join("; ");
+}

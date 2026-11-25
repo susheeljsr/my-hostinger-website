@@ -11,6 +11,7 @@ import { grokPwaPlugin } from "./scripts/grok-pwa-plugin.mjs";
 // @ts-expect-error JS plugin alongside the TS vite config
 import { appEnvPlugin } from "./scripts/app-env-plugin.mjs";
 import { isMigrationFile } from "./scripts/migration-plan.mjs";
+import { contentSecurityPolicy } from "./src/lib/content-security-policy.ts";
 
 /** The files `src/lib/db.ts` globs — same directory, same non-recursive scope. */
 function hasGlobbedMigrations(root: string): boolean {
@@ -47,6 +48,19 @@ function pgliteBootstrapPlugin(): Plugin {
         console.error("[app-builder] DB bootstrap failed:", err);
         throw err;
       }
+    },
+  };
+}
+
+function contentSecurityPolicyPlugin(): Plugin {
+  const value = contentSecurityPolicy();
+  return {
+    name: "app-builder:csp",
+    configureServer(server) {
+      server.middlewares.use((_req, res, next) => {
+        res.setHeader("Content-Security-Policy", value);
+        next();
+      });
     },
   };
 }
@@ -159,6 +173,7 @@ export default defineConfig(({ command, isPreview }) => ({
   resolve: { tsconfigPaths: true },
   plugins: [
     pgliteBootstrapPlugin(),
+    contentSecurityPolicyPlugin(),
     // Before tanstackStart so /auth/popup never falls through to the SPA.
     authPopupPlugin(),
     // Dev-only /__app-env, read by scripts/check-auth-invariant.mjs.
@@ -171,6 +186,13 @@ export default defineConfig(({ command, isPreview }) => ({
       ? [
           nitro({
             preset: "vercel",
+            routeRules: {
+              "/**": {
+                headers: {
+                  "content-security-policy": contentSecurityPolicy(),
+                },
+              },
+            },
             // Auto-registers server/middleware/* (the PWA install page +
             // manifest + head-tag middleware). Nitro v3 defaults serverDir to
             // false, so removing this silently unwires /?install=1 on deploys.
